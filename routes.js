@@ -1,4 +1,4 @@
-const Task = require('./task');
+const Task = require('./Task');
 const express = require('express');
 const router = express.Router();
 
@@ -31,7 +31,7 @@ router.get('/tasks', async (req, res)=>{
     
 })
 
-// Get a tas by ID|
+// Get a task by ID
 router.get('/tasks/:id', async (req, res) => {
     try {
         const task = await Task.findById(req.params.id);

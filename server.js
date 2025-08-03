@@ -8,11 +8,8 @@ app.use(express.json());
 const  mongoUri = 'mongodb://localhost:27017/taskdb';
 const PORT = 3000;
 
-mongoose.connect(mongoUri, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true,
-
-}).then(()=> console.log('connected to MongoDB'))
+mongoose.connect(mongoUri)
+.then(()=> console.log(' connected to MongoDB'))
 .catch(err => console.error('Mongodb connection error:' , err));
 
 //use task routes
